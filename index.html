@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allrecipes</title>
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="header-sub-main">
+                <section class="header-sub-main__main">
+                    <nav class="mobile-navbar">
+                        <div class="menu">
+                            <div class="menu__line"></div>
+                            <div class="menu__line"></div>
+                            <div class="menu__line"></div>
+                        </div>
+
+
+                        <!-- <ul class="mobile-navbar__list-container">
+                            
+                        </ul> -->
+
+                    </nav>
+
+                    <div class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="96.438" height="36.834"
+                            viewBox="-0.452 -0.416 96.438 36.834">
+                            <path fill="#F60"
+                                d="M49.676 26.983a1.3 1.3 0 0 0-.596.152c-1.513 1.007-2.686.832-3.447-.471-.522-.896-.782-2.658-.782-4.726s.26-3.871.782-4.766c.763-1.305 1.936-1.471 3.447-.471.139.1.4.2.6.153.689 0 1.252-.563 1.252-1.26 0-.556-.542-1.007-.866-1.192-.749-.418-2.107-.947-3.154-.842-1.233.119-2.068.536-3.017 1.65s-1.531 3.652-1.531 6.719v.014c0 3.1.6 5.6 1.5 6.682.947 1.1 1.8 1.5 3 1.656 1.047.1 2.405-.433 3.154-.85.324-.178.866-.629.866-1.191.044-.74-.484-1.24-1.184-1.257zM23.421 29.043V14.81c0-.696.562-1.26 1.259-1.26.695 0 1.3.6 1.3 1.26v.702c.854-1.166 2.547-2.021 4.281-1.962.676 0 1.2.6 1.2 1.293 0 .669-.522 1.22-1.191 1.259h-.087a1.3 1.3 0 0 1-.252-.026c-.205-.021-.364-.021-.509-.021-1.187 0-2.074.49-2.566 1.1-.574.702-.865 1.49-.865 2.35l-.009 9.537c0 .703-.568 1.272-1.258 1.272-.741-.014-1.324-.614-1.324-1.271zM54.018 10.919c-.77 0-1.406-.628-1.406-1.404 0-.782.638-1.412 1.406-1.412.773 0 1.4.6 1.4 1.412.003.785-.618 1.385-1.418 1.404z" />
+                            <path fill="#FEAA26"
+                                d="M91.903 0c-1.208 0-2.135.5-2.742 1.502-.716 1.147-1.072 2.4-1.072 3.8 0 1.8.4 3.3 1.3 4.501.373.5.9 1.1 1.2 1.593.226.3.4.8.4 1.3.023 1.827-1.169 15.275-1.181 15.31-.051.264-.012.7.1.928.24.8 1 1.5 1.9 1.463.909 0 1.697-.613 1.938-1.461.07-.24.109-.664.06-.928-.009-.037-1.202-13.485-1.179-15.312.021-.458.195-1.001.418-1.271.367-.444.871-1.059 1.246-1.594.894-1.236 1.336-2.734 1.336-4.501a6.96 6.96 0 0 0-1.072-3.757C94.041.5 93.1 0 91.9 0z" />
+                            <path fill="#F60"
+                                d="M5.076 15.823c-1.663 0-2.285 2.756-2.285 6.156s.5 6.2 2.3 6.2c1.829 0 2.278-2.754 2.278-6.154C7.355 18.6 7.1 15.8 5.1 15.823zm3.572 14.493c-.338 0-.663-.133-.899-.378-.246-.238-.349-.538-.349-.906l-.024-.432c-.782 1.179-1.896 1.717-3.308 1.725-1.054.006-2.191-.882-2.968-2.222C.372 26.8 0 24.8 0 21.887c0-2.838.377-4.924 1.121-6.196.78-1.338 1.749-2.02 2.358-2.113.266-.034.504-.054.735-.054 1.118 0 2.4.6 3.2 1.901v-.596c0-.702.575-1.28 1.277-1.28.71 0 1.3.6 1.3 1.28v14.194C9.922 29.7 9.4 30.3 8.6 30.316zM15.441 28.924c0 .77-.615 1.393-1.387 1.393a1.39 1.39 0 0 1-1.383-1.393V4.207a1.39 1.39 0 0 1 1.383-1.392c.771 0 1.4.6 1.4 1.392v24.717zM20.836 28.924a1.385 1.385 0 1 1-2.771 0V4.207c0-.769.615-1.392 1.385-1.392.763 0 1.4.6 1.4 1.392v24.717zM55.396 28.924c0 .77-.617 1.393-1.386 1.393a1.39 1.39 0 0 1-1.385-1.393V14.935c0-.768.623-1.385 1.385-1.385.769 0 1.4.6 1.4 1.385v13.989zM62.836 28.135c-1.828 0-2.285-2.756-2.285-6.155s.238-6.156 2.285-6.156c1.658 0 2.3 2.8 2.3 6.156-.013 3.42-.536 6.12-2.336 6.155zm3.957-12.445c-.782-1.338-1.749-2.02-2.359-2.113a6 6 0 0 0-.735-.054c-1.117 0-2.394.622-3.153 1.901v-.596c0-.702-.577-1.28-1.278-1.28-.709 0-1.272.578-1.272 1.28V35.14c0 .7.6 1.3 1.3 1.278.688 0 1.258-.556 1.271-1.246.007-.014 0-6.348 0-6.573.782 1.2 1.9 1.7 3.3 1.724 1.055 0 2.194-.881 2.963-2.221.735-1.271 1.105-3.293 1.105-6.217C67.912 19 67.5 17 66.8 15.69zM38.409 20.667c0-2.384-.688-4.77-2.365-4.77-1.676 0-2.12 2.385-2.12 4.777zm2.069 1.85h-6.562c-.054 1.2.2 2.9.5 3.856.191.6.7 1.7 1.9 1.717 1.16 0 1.835-.969 1.968-1.863.212-1.377 2.751-1.271 2.4.57-.423 2.188-1.928 3.525-4.36 3.525-1.51 0-2.716-.645-3.711-2.188-.979-1.529-1.219-4.359-1.219-6.301 0-2.183.397-4.01.854-5.349.425-1.233 1.366-2.937 4.075-2.937 4.009 0 4.7 4.5 4.7 8.45-.029.303-.223.503-.523.52zM76.449 20.667c0-2.384-.69-4.77-2.367-4.77-1.676 0-2.119 2.385-2.119 4.777zm2.067 1.85h-6.561c-.054 1.2.2 2.9.5 3.856.185.6.7 1.7 1.9 1.717s1.836-.969 1.969-1.863c.211-1.377 2.75-1.271 2.4.57-.426 2.188-1.931 3.525-4.361 3.525-1.504 0-2.717-.645-3.711-2.188-.979-1.529-1.219-4.359-1.219-6.301 0-2.183.401-4.01.86-5.349.419-1.233 1.364-2.937 4.068-2.937 4.008 0 4.7 4.5 4.7 8.45-.022.303-.261.503-.561.52zM85.818 21.292c-.985-.842-2.081-1.539-2.757-2.328-.921-1.064-.206-2.801.836-2.976.582-.091 1.3 0 1.9.325.185.1.4.2.6.18.688 0 1.239-.565 1.239-1.247 0-.523-.311-.96-.763-1.153l-.014-.006c-1.788-.709-3.922-.974-5.52.722-1.604 1.696-1.438 4.5.2 6.1.93.9 2.9 2.2 3.5 3.166 1.577 2.434-.537 4.686-2.977 3.388h-.007a1.2 1.2 0 0 0-.682-.206c-.684 0-1.238.559-1.238 1.248v.311c.055.3.2.5.4.7.008 0 .1.1.2.118 1.529 1 3.8 1.1 5.399-.151C88.656 27.4 88.5 23.6 85.8 21.292z" />
+                        </svg>
+                    </div>
+                </section>
+
+                <section class="header-sub-main__search">
+                    <input class="search" type="search" name="search" id="search" placeholder="Find a recipe or ingredient">
+                    <button class="search__icon-button">
+                        <?xml version="1.0" encoding="utf-8"?><svg fill="#fff" width="20" height="20" version="1.1"
+                            id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" width="122.879px" height="119.799px" viewBox="0 0 122.879 119.799"
+                            enable-background="new 0 0 122.879 119.799" xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M49.988,0h0.016v0.007C63.803,0.011,76.298,5.608,85.34,14.652c9.027,9.031,14.619,21.515,14.628,35.303h0.007v0.033v0.04 h-0.007c-0.005,5.557-0.917,10.905-2.594,15.892c-0.281,0.837-0.575,1.641-0.877,2.409v0.007c-1.446,3.66-3.315,7.12-5.547,10.307 l29.082,26.139l0.018,0.016l0.157,0.146l0.011,0.011c1.642,1.563,2.536,3.656,2.649,5.78c0.11,2.1-0.543,4.248-1.979,5.971 l-0.011,0.016l-0.175,0.203l-0.035,0.035l-0.146,0.16l-0.016,0.021c-1.565,1.642-3.654,2.534-5.78,2.646 c-2.097,0.111-4.247-0.54-5.971-1.978l-0.015-0.011l-0.204-0.175l-0.029-0.024L78.761,90.865c-0.88,0.62-1.778,1.209-2.687,1.765 c-1.233,0.755-2.51,1.466-3.813,2.115c-6.699,3.342-14.269,5.222-22.272,5.222v0.007h-0.016v-0.007 c-13.799-0.004-26.296-5.601-35.338-14.645C5.605,76.291,0.016,63.805,0.007,50.021H0v-0.033v-0.016h0.007 c0.004-13.799,5.601-26.296,14.645-35.338C23.683,5.608,36.167,0.016,49.955,0.007V0H49.988L49.988,0z M50.004,11.21v0.007h-0.016 h-0.033V11.21c-10.686,0.007-20.372,4.35-27.384,11.359C15.56,29.578,11.213,39.274,11.21,49.973h0.007v0.016v0.033H11.21 c0.007,10.686,4.347,20.367,11.359,27.381c7.009,7.012,16.705,11.359,27.403,11.361v-0.007h0.016h0.033v0.007 c10.686-0.007,20.368-4.348,27.382-11.359c7.011-7.009,11.358-16.702,11.36-27.4h-0.006v-0.016v-0.033h0.006 c-0.006-10.686-4.35-20.372-11.358-27.384C70.396,15.56,60.703,11.213,50.004,11.21L50.004,11.21z" />
+                            </g>
+                        </svg>
+                    </button>
+                </section>
+
+                <div class="mobile-log-in log-in">
+                    <div class="log-in__icon">
+                        <?xml version="1.0" encoding="utf-8"?><svg fill="rgb(181, 56, 17)" width="20" height="20"
+                            version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 122.9"
+                            style="enable-background:new 0 0 122.9 122.9" xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M61.4,0c17,0,32.3,6.9,43.4,18c11.1,11.1,18,26.5,18,43.4c0,17-6.9,32.3-18,43.4c-11.1,11.1-26.5,18-43.4,18 s-32.3-6.9-43.4-18C6.9,93.8,0,78.4,0,61.4c0-17,6.9-32.3,18-43.4C29.1,6.9,44.5,0,61.4,0L61.4,0z M41.3,54.3c-1.1,0-2,0.3-2.5,0.7 c-0.3,0.2-0.6,0.5-0.7,0.8c-0.2,0.4-0.3,0.8-0.2,1.4c0,1.5,0.8,3.5,2.4,5.8l0,0l0,0l5,8c2,3.2,4.1,6.5,6.8,8.9 c2.5,2.3,5.6,3.9,9.6,3.9c4.4,0,7.6-1.6,10.2-4.1c2.7-2.5,4.9-6,7-9.5l5.7-9.3c1.1-2.4,1.4-4,1.2-5c-0.1-0.6-0.8-0.8-1.8-0.9 c-0.2,0-0.5,0-0.7,0c-0.3,0-0.5,0-0.8,0c-0.2,0-0.3,0-0.4,0c-0.5,0-1,0-1.6-0.1l1.9-8.6c-14.4,2.3-25.2-8.4-40.4-2.1L43,54.4 C42.4,54.4,41.8,54.4,41.3,54.3L41.3,54.3L41.3,54.3L41.3,54.3z M18.8,95.7c7.1-2.5,19.6-3.8,25.4-7.7c1-1.3,2.1-2.9,3.1-4.3 c0.6-0.9,1.1-1.7,1.6-2.3c0.1-0.1,0.2-0.2,0.3-0.3c-2.4-2.5-4.4-5.5-6.3-8.5l-5-8C36,61.8,35,59.3,35,57.3c0-1,0.1-1.9,0.5-2.6 c0.4-0.8,1-1.5,1.7-2c0.4-0.2,0.8-0.5,1.2-0.6c-0.3-4.3-0.4-9.8-0.2-14.4c0.1-1.1,0.3-2.2,0.6-3.3c1.3-4.6,4.5-8.3,8.5-10.8 c1.4-0.9,2.9-1.6,4.6-2.2c2.9-1.1,1.5-5.5,4.7-5.6c7.5-0.2,19.8,6.2,24.6,11.4c2.8,3,4.6,7,4.9,12.3l-0.3,13.1l0,0 c1.4,0.4,2.3,1.3,2.7,2.7c0.4,1.6,0,3.8-1.4,6.9l0,0c0,0.1-0.1,0.1-0.1,0.2l-5.7,9.4c-2.2,3.6-4.5,7.3-7.5,10.1L73.7,82l0,0 c0.4,0.5,0.8,1.1,1.2,1.7c0.8,1.1,1.6,2.4,2.5,3.6c5.3,4.5,19.3,5.9,26.7,8.6c7.6-9.4,12.1-21.4,12.1-34.4c0-15.1-6.1-28.8-16-38.7 c-9.9-9.9-23.6-16-38.7-16s-28.8,6.1-38.7,16c-9.9,9.9-16,23.6-16,38.7C6.7,74.4,11.2,86.3,18.8,95.7L18.8,95.7z M77,90.5 c-1.4-1.6-2.8-3.7-4.1-5.5c-0.4-0.5-0.7-1.1-1.1-1.5c-2.7,2-6,3.3-10.3,3.3c-4.5,0-8-1.6-10.9-4.1c0,0,0,0.1-0.1,0.1 c-0.5,0.7-1,1.4-1.6,2.3c-1.1,1.6-2.3,3.3-3.4,4.8C45.6,100,71.1,106,77,90.5L77,90.5z" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <a href="#" class="log-in__title">Log In</a>
+                </div>
+
+                <div class="desktop-main-nav">
+                    <div class="log-in">
+                        <div class="log-in__icon">
+                            <?xml version="1.0" encoding="utf-8"?><svg fill="rgb(181, 56, 17)" width="20" height="20"
+                                version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 122.9"
+                                style="enable-background:new 0 0 122.9 122.9" xml:space="preserve">
+                                <g>
+                                    <path
+                                        d="M61.4,0c17,0,32.3,6.9,43.4,18c11.1,11.1,18,26.5,18,43.4c0,17-6.9,32.3-18,43.4c-11.1,11.1-26.5,18-43.4,18 s-32.3-6.9-43.4-18C6.9,93.8,0,78.4,0,61.4c0-17,6.9-32.3,18-43.4C29.1,6.9,44.5,0,61.4,0L61.4,0z M41.3,54.3c-1.1,0-2,0.3-2.5,0.7 c-0.3,0.2-0.6,0.5-0.7,0.8c-0.2,0.4-0.3,0.8-0.2,1.4c0,1.5,0.8,3.5,2.4,5.8l0,0l0,0l5,8c2,3.2,4.1,6.5,6.8,8.9 c2.5,2.3,5.6,3.9,9.6,3.9c4.4,0,7.6-1.6,10.2-4.1c2.7-2.5,4.9-6,7-9.5l5.7-9.3c1.1-2.4,1.4-4,1.2-5c-0.1-0.6-0.8-0.8-1.8-0.9 c-0.2,0-0.5,0-0.7,0c-0.3,0-0.5,0-0.8,0c-0.2,0-0.3,0-0.4,0c-0.5,0-1,0-1.6-0.1l1.9-8.6c-14.4,2.3-25.2-8.4-40.4-2.1L43,54.4 C42.4,54.4,41.8,54.4,41.3,54.3L41.3,54.3L41.3,54.3L41.3,54.3z M18.8,95.7c7.1-2.5,19.6-3.8,25.4-7.7c1-1.3,2.1-2.9,3.1-4.3 c0.6-0.9,1.1-1.7,1.6-2.3c0.1-0.1,0.2-0.2,0.3-0.3c-2.4-2.5-4.4-5.5-6.3-8.5l-5-8C36,61.8,35,59.3,35,57.3c0-1,0.1-1.9,0.5-2.6 c0.4-0.8,1-1.5,1.7-2c0.4-0.2,0.8-0.5,1.2-0.6c-0.3-4.3-0.4-9.8-0.2-14.4c0.1-1.1,0.3-2.2,0.6-3.3c1.3-4.6,4.5-8.3,8.5-10.8 c1.4-0.9,2.9-1.6,4.6-2.2c2.9-1.1,1.5-5.5,4.7-5.6c7.5-0.2,19.8,6.2,24.6,11.4c2.8,3,4.6,7,4.9,12.3l-0.3,13.1l0,0 c1.4,0.4,2.3,1.3,2.7,2.7c0.4,1.6,0,3.8-1.4,6.9l0,0c0,0.1-0.1,0.1-0.1,0.2l-5.7,9.4c-2.2,3.6-4.5,7.3-7.5,10.1L73.7,82l0,0 c0.4,0.5,0.8,1.1,1.2,1.7c0.8,1.1,1.6,2.4,2.5,3.6c5.3,4.5,19.3,5.9,26.7,8.6c7.6-9.4,12.1-21.4,12.1-34.4c0-15.1-6.1-28.8-16-38.7 c-9.9-9.9-23.6-16-38.7-16s-28.8,6.1-38.7,16c-9.9,9.9-16,23.6-16,38.7C6.7,74.4,11.2,86.3,18.8,95.7L18.8,95.7z M77,90.5 c-1.4-1.6-2.8-3.7-4.1-5.5c-0.4-0.5-0.7-1.1-1.1-1.5c-2.7,2-6,3.3-10.3,3.3c-4.5,0-8-1.6-10.9-4.1c0,0,0,0.1-0.1,0.1 c-0.5,0.7-1,1.4-1.6,2.3c-1.1,1.6-2.3,3.3-3.4,4.8C45.6,100,71.1,106,77,90.5L77,90.5z" />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <a href="#" class="log-in__title">Log In</a>
+                    </div>
+
+                    <a href="#">Magazine</a>
+                    <a href="#">Newsletters</a>
+                    <a class="sweepstakes-desktop-nav" href="#">Sweepstakes</a>
+                </div>
+
+            </div>
+
+            <div class="header-sub-desktop">
+                <ul class="header-sub-desktop__navbar-list-container">
+                    <li class="header-sub-desktop__navbar-list"><a href="dinners">Dinners</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="males">Males</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="ingredients">Ingredients</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="occasions">Occasions</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="cuisines">Cuisines</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="kitchen-tips">Kitchen Tips</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="news">News</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="Features">Features</a></li>
+                    <li class="header-sub-desktop__navbar-list"><a href="about-us">About Us</a></li>
+                </ul>
+
+                <a href="#" class="header-sub-desktop__get-the-magazine">GET THE MAGAZINE</a>
+            </div>
+
+        </header>
+
+        <section class="trust">
+            <h2 class="trust-title">America's <span class="trust-title-high">#1 Trusted Recipe Resource</span> since
+                1997</h2>
+
+            <div class="trust__numbers-container">
+                <div class="trust__number-container">
+                    <div class="trust__number-main">
+                        <div class="trust__number-ball trust__number-ball-green"></div>
+                        <p class="trust__number">113K</p>
+                    </div>
+                    <p class="trust__number-title">Original Recipes</p>
+                </div>
+
+                <div class="trust__number-container">
+                    <div class="trust__number-main">
+                        <div class="trust__number-ball trust__number-ball-red"></div>
+                        <p class="trust__number">6.9M+</p>
+                    </div>
+                    <p class="trust__number-title">Ratings & Reviews</p>
+
+                </div>
+
+                <div class="trust__number-container">
+                    <div class="trust__number-main">
+                        <div class="trust__number-ball trust__number-ball-yellow"></div>
+                        <p class="trust__number">60M</p>
+                    </div>
+                    <p class="trust__number-title">Home Cooks</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="hero">
+            <article class="article">
+                <div class="article__image-container">
+                    <img src="https://www.allrecipes.com/thmb/jEAE0ExTIegTDe9EgtZ5wFoay2Q=/800x533/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-best-recipies-24-table-1221-4x3-117c6895780242b5b7ce9adeced9e878.jpg"
+                        alt="Food" class="article__image">
+                </div>
+
+                <div class="article__content">
+                    <p class="article__type">In the Kitchen</p>
+                    <h2 class="article__title"><a href="#">Best Recipes 2024: Party Edition</a></h2>
+                    <p class="article__paragraph">Whether you call hanging out with friends and family a "party,"
+                        "entertaining," or a "get-together," it always involves good food. Here are our recipe picks for
+                        any occasion.</p>
+                </div>
+            </article>
+
+            <section class="news">
+                <h2 class="news__title">Food News</h2>
+                <div class="news__content">
+                    <a class="news__article" href="#">
+                        <div class="news__image-container">
+                            <img src="https://www.allrecipes.com/thmb/W-CVc91402OveNLLvvVNqFnZLio=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-Ina-Gartens-Beef-Stew-Recipe_4x3-d693329913ae498aafe3d64c3b8725d2.jpg"
+                                alt="Image" class="news__image">
+                        </div>
+                        <h3 class="news__article-title">
+                            Ina Garten's Beef Stew Recipe Is What We're Making on Repeat All Season Long</h3>
+                    </a>
+
+                    <a class="news__article" href="#">
+                        <div class="news__image-container">
+                            <img src="https://www.allrecipes.com/thmb/K7CIJhHycJ7X7cx-bdfYiBTi4Mw=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8690218-AppleSpiceRolls-Allrecipes-Magazine-GOLDMAN_ALR_FallBZ_WakeUp_R317338_36163-4x3-de9f69e8d3374f50bfe5c69e5d2be4b5.jpg"
+                                alt="Image" class="news__image">
+                        </div>
+                        <h3 class="news__article-title">Our Fall Issue of Allrecipes Magazine Is Here</h3>
+                    </a>
+
+                    <a class="news__article" href="#">
+                        <div class="news__image-container">
+                            <img src="https://www.allrecipes.com/thmb/6HLDrXZncG1Gl2B2fs9qVwq2kYo=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-dunkin-fall-adobe-4x3-abc42304ad384d77ab5f9638c3c84180.jpg"
+                                alt="Image" class="news__image">
+                        </div>
+                        <h3 class="news__article-title">Dunkin’s Fall Menu Is the Best We’ve Seen in Years</h3>
+                    </a>
+
+                    <a class="news__article" href="#">
+                        <div class="news__image-container">
+                            <img src="https://www.allrecipes.com/thmb/d0JAm94WXE8H2ftWEU4LSbSkUM8=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Best-Vacuum-Sealer-ALR-tout-b07956e49827407884678d68a8c3032f.jpg"
+                                alt="Image" class="news__image">
+                        </div>
+                        <h3 class="news__article-title">I Finally Found the Best Vacuum Sealer for My Tiny Kitchen</h3>
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <section class="trending">
+            <h2 class="trending__title">Trending Now</h2>
+            <div class="trending__content">
+                <a href="#" class="trending__link">
+                    <div class="trending__link-image-container">
+                        <img src="https://www.allrecipes.com/thmb/iqas1avyCn8G38DuuyQkSp2nplg=/400x264/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8495323_Disneys-Ratatouille-4x3-bf5d226f74224306a022efba8576ceb2.jpg"
+                            alt="Image" class="trending__lin-image">
+                    </div>
+                    <div class="trending__link-content">
+                        <p class="trending__link-type">Trends</p>
+                        <h3 class="trending__link-title">The 18 Recipes We Can’t Wait To Make This September</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="trending__link">
+                    <div class="trending__link-image-container">
+                        <img src="https://www.allrecipes.com/thmb/CrJ5P7eweVujdM64yT7WBOxU0Uw=/400x264/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Football-Cheese-Ball-1x1-1-34baff68d817404dbcf3b84bcdc1fad6.png"
+                            alt="Image" class="trending__lin-image">
+                    </div>
+                    <div class="trending__link-content">
+
+                        <p class="trending__link-type">Tailgating</p>
+                        <h3 class="trending__link-title">The Most Popular Tailgating Foods Across 34 States</h3>
+                    </div>
+                </a>
+
+
+                <a href="#" class="trending__link">
+                    <div class="trending__link-image-container">
+                        <img src="https://www.allrecipes.com/thmb/-qqqSUux6Ydzm1n7w0VDtKEsl08=/400x264/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/458727_Plum-Blueberry-Upside-Down-Cake-4x3-peach-version-8c69820403ba4d578b00a9ec46e5013f.jpg"
+                            alt="Image" class="trending__lin-image">
+                    </div>
+                    <div class="trending__link-content">
+                        <p class="trending__link-type">Fruit Desserts</p>
+                        <h3 class="trending__link-title">14 Perfect Fruit Desserts for Late Summer</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="trending__link">
+                    <div class="trending__link-image-container">
+                        <img src="https://www.allrecipes.com/thmb/-zsgsnLZ1-cYjKaOK16AeBs3uGQ=/400x264/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/5770471_Arizona-Hatch-Chili-4x3-RecipeID-266314-Green-Chili-da729e6a04cb4f949ee1741f66eff045.jpg"
+                            alt="Image" class="trending__lin-image">
+                    </div>
+                    <div class="trending__link-content">
+                        <p class="trending__link-type">Hatch Chiles</p>
+                        <h3 class="trending__link-title">We're Hooked on Hatch Chiles</h3>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="cook">
+            <div class="cook-sub-1">
+
+                <div class="cook-main">
+                    <h2 class="cook__title">
+                        Home of the Home Cook
+                    </h2>
+                    <p class="cook__paragraph">
+                        We know our community (that’s you!) is the key ingredient that sets us apart. <span
+                            class="cook__learn-more">Learn More</span>
+                    </p>
+                </div>
+
+                <div class="cook__customer">
+                    <div class="cook__customer-image-container">
+                        <img src="https://www.allrecipes.com/thmb/CkAU9uRT2zhYNjTdfxa81iIKqIA=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/footballgrl16-Oklahoma-f979248f6b1f4c01877a2e0641045e6e.jpg"
+                            alt="Customer" class="cook__customer-image">
+                    </div>
+                    <div class="cook__customer-content">
+                        <h3 class="cook__customer-content-title">
+                            Waffles</h3>
+                        <p class="cook__customer-paragraph">"My first waffles from scratch and my picky husband thought
+                            these were amazing! Light and fluffy with a great flavor. I also made the homemade vanilla
+                            maple syrup."</p>
+                        <p class="cook__customer-location">footballgrl16, Oklahoma, Joined 2009</p>
+                        <div class="cook__pointers">
+                            <div class="cook__pointer"></div>
+                            <div class="cook__pointer"></div>
+                            <div class="cook__pointer"></div>
+                            <div class="cook__pointer"></div>
+                            <div class="cook__pointer cook__heightened-poiner"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cook__links">
+                    <div class="cook-soicl-links-container">
+                        <a href="#" class="cook-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                viewBox="0 0 509 507.14">
+                                <path fill-rule="nonzero"
+                                    d="M509 254.5C509 113.94 395.06 0 254.5 0S0 113.94 0 254.5C0 373.86 82.17 474 193.02 501.51V332.27h-52.48V254.5h52.48v-33.51c0-86.63 39.2-126.78 124.24-126.78 16.13 0 43.95 3.17 55.33 6.33v70.5c-6.01-.63-16.44-.95-29.4-.95-41.73 0-57.86 15.81-57.86 56.91v27.5h83.13l-14.28 77.77h-68.85v174.87C411.35 491.92 509 384.62 509 254.5z" />
+                            </svg> <span class="cook__link-numbers">3.9M</span></a>
+                        <a href="#" class="cook-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                viewBox="0 0 512 512">
+                                <path fill-rule="nonzero"
+                                    d="M170.663 256.157c-.083-47.121 38.055-85.4 85.167-85.482 47.121-.092 85.407 38.029 85.499 85.159.091 47.13-38.047 85.4-85.176 85.492-47.112.09-85.399-38.039-85.49-85.169zm-46.108.092c.141 72.602 59.106 131.327 131.69 131.185 72.592-.14 131.35-59.089 131.209-131.691-.141-72.577-59.114-131.336-131.715-131.194-72.585.141-131.325 59.114-131.184 131.7zm237.104-137.092c.033 16.954 13.817 30.682 30.772 30.649 16.961-.034 30.689-13.811 30.664-30.765-.033-16.954-13.818-30.69-30.78-30.656-16.962.033-30.689 13.818-30.656 30.772zm-208.696 345.4c-24.958-1.086-38.511-5.234-47.543-8.709-11.961-4.628-20.496-10.177-29.479-19.093-8.966-8.951-14.532-17.461-19.202-29.397-3.508-9.033-7.73-22.569-8.9-47.527-1.269-26.983-1.559-35.078-1.683-103.433-.133-68.338.116-76.434 1.294-103.441 1.069-24.941 5.242-38.512 8.709-47.536 4.628-11.977 10.161-20.496 19.094-29.478 8.949-8.983 17.459-14.532 29.403-19.202 9.025-3.526 22.561-7.715 47.511-8.9 26.998-1.278 35.085-1.551 103.423-1.684 68.353-.133 76.448.108 103.456 1.294 24.94 1.086 38.51 5.217 47.527 8.709 11.968 4.628 20.503 10.145 29.478 19.094 8.974 8.95 14.54 17.443 19.21 29.413 3.524 8.999 7.714 22.552 8.892 47.494 1.285 26.998 1.576 35.094 1.7 103.432.132 68.355-.117 76.451-1.302 103.442-1.087 24.957-5.226 38.52-8.709 47.56-4.629 11.953-10.161 20.488-19.103 29.471-8.941 8.949-17.451 14.531-29.403 19.201-9.009 3.517-22.561 7.714-47.494 8.9-26.998 1.269-35.086 1.56-103.448 1.684-68.338.133-76.424-.124-103.431-1.294zM149.977 1.773c-27.239 1.286-45.843 5.648-62.101 12.019-16.829 6.561-31.095 15.353-45.286 29.603C28.381 57.653 19.655 71.944 13.144 88.79c-6.303 16.299-10.575 34.912-11.778 62.168C.172 178.264-.102 186.973.031 256.489c.133 69.508.439 78.234 1.741 105.548 1.302 27.231 5.649 45.827 12.019 62.092 6.569 16.83 15.353 31.089 29.611 45.289 14.25 14.2 28.55 22.918 45.404 29.438 16.282 6.294 34.902 10.583 62.15 11.777 27.305 1.203 36.022 1.468 105.521 1.336 69.532-.133 78.25-.44 105.555-1.734 27.239-1.302 45.826-5.664 62.1-12.019 16.829-6.585 31.095-15.353 45.288-29.611 14.191-14.251 22.917-28.55 29.428-45.404 6.304-16.282 10.592-34.904 11.777-62.134 1.195-27.323 1.478-36.049 1.344-105.557-.133-69.516-.447-78.225-1.741-105.522-1.294-27.256-5.657-45.844-12.019-62.118-6.577-16.829-15.352-31.08-29.602-45.288-14.25-14.192-28.55-22.935-45.404-29.429-16.29-6.304-34.903-10.6-62.15-11.778C333.747.164 325.03-.101 255.506.031c-69.507.133-78.224.431-105.529 1.742z" />
+                            </svg> <span class="cook__link-numbers">2.2M</span></a>
+                        <a href="#" class="cook-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                viewBox="0 0 512 512">
+                                <path fill-rule="nonzero"
+                                    d="M0 256c0 109.29 68.5 202.6 164.91 239.32-2.35-19.99-4.84-52.95.53-76.07 4.63-19.89 29.89-126.68 29.89-126.68s-7.62-15.25-7.62-37.85c0-35.41 20.53-61.87 46.11-61.87 21.76 0 32.25 16.33 32.25 35.89 0 21.87-13.93 54.55-21.12 84.87-5.99 25.36 12.74 46.05 37.74 46.05 45.29 0 80.13-47.77 80.13-116.71 0-61.04-43.86-103.68-106.48-103.68-72.48 0-115.04 54.38-115.04 110.59 0 21.91 8.42 45.38 18.96 58.16a7.568 7.568 0 012.07 5.21c0 .7-.1 1.41-.29 2.09-1.94 8.07-6.26 25.37-7.08 28.9-1.13 4.65-3.69 5.66-8.54 3.4-31.82-14.81-51.71-61.34-51.71-98.71 0-80.41 58.4-154.22 168.36-154.22 88.41 0 157.13 63 157.13 147.18 0 87.83-55.37 158.53-132.25 158.53-25.84 0-50.09-13.45-58.41-29.3 0 0-12.78 48.68-15.88 60.59-6.01 23.13-22.7 52.39-33.04 69.01 23.84 7.36 49.14 11.3 75.38 11.3 141.38 0 256-114.63 256-256S397.38 0 256 0 0 114.62 0 256z" />
+                            </svg> <span class="cook__link-numbers">1.3M</span></a>
+                        <a href="#" class="cook-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                viewBox="0 0 449.45 515.38">
+                                <path fill-rule="nonzero"
+                                    d="M382.31 103.3c-27.76-18.1-47.79-47.07-54.04-80.82-1.35-7.29-2.1-14.8-2.1-22.48h-88.6l-.15 355.09c-1.48 39.77-34.21 71.68-74.33 71.68-12.47 0-24.21-3.11-34.55-8.56-23.71-12.47-39.94-37.32-39.94-65.91 0-41.07 33.42-74.49 74.48-74.49 7.67 0 15.02 1.27 21.97 3.44V190.8c-7.2-.99-14.51-1.59-21.97-1.59C73.16 189.21 0 262.36 0 352.3c0 55.17 27.56 104 69.63 133.52 26.48 18.61 58.71 29.56 93.46 29.56 89.93 0 163.08-73.16 163.08-163.08V172.23c34.75 24.94 77.33 39.64 123.28 39.64v-88.61c-24.75 0-47.8-7.35-67.14-19.96z" />
+                            </svg> <span class="cook__link-numbers">675K</span></a>
+                        <a href="#" class="cook-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                viewBox="0 0 640 640">
+                                <path
+                                    d="M633.468 192.038s-6.248-44.115-25.477-63.485c-24.366-25.477-51.65-25.642-64.123-27.118-89.493-6.52-223.904-6.52-223.904-6.52h-.236s-134.352 0-223.893 6.52c-12.52 1.523-39.768 1.63-64.123 27.118-19.24 19.37-25.358 63.485-25.358 63.485S-.012 243.806-.012 295.681v48.509c0 51.768 6.366 103.643 6.366 103.643s6.248 44.114 25.358 63.52c24.355 25.477 56.363 24.65 70.655 27.367 51.237 4.89 217.644 6.366 217.644 6.366s134.529-.237 224.022-6.638c12.52-1.477 39.756-1.63 64.123-27.119 19.24-19.37 25.476-63.532 25.476-63.532S640 396.03 640 344.154v-48.508c-.13-51.769-6.497-103.643-6.497-103.643l-.035.035zm-379.8 211.007V223.173L426.56 313.41l-172.892 89.635z" />
+                            </svg> <span class="cook__link-numbers">1.8M</span></a>
+                        <a href="#" class="cook-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                viewBox="0 0 512 462.799">
+                                <path fill-rule="nonzero"
+                                    d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" />
+                            </svg><span class="cook__link-numbers">4.2M</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cook-sub-2">
+                <div class="cook-main">
+                    <h2 class="cook__title">Our People</h2>
+                    <p class="cook__paragraph">Testing, tasting, editing, and tasting again—our food pros are dedicated
+                        to showcasing the best of what you, our home cook heroes, are doing in your kitchens.</p>
+                </div>
+
+                <div class="cook__lead cook__team">
+                    <h3 class="cook__lead-title cook__team-title">Editorial Leadership</h3>
+                    <div class="cook__lead-images-container team-images-conatiner">
+                        <div class="cook__lead-images-container person-image-conatiner">
+                            <img src="https://www.allrecipes.com/thmb/VmfQIMU29bIj_CrAoOHm_h2HRsQ=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Ashley-784a6168bad84a919fefbc4ed7137029.jpeg"
+                                alt="Photo" class="cook__lead-image person-image">
+                        </div>
+
+                        <div class="cook__lead-images-container person-image-conatiner">
+                            <img src="https://www.allrecipes.com/thmb/Vp_AjGMV5NcWJLE8EBVddOjOATU=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Diana-8b6d081cf2d046b48ca96aec4f2e83a8.jpeg"
+                                alt="Photo" class="cook__lead-image person-image">
+                        </div>
+
+                        <div class="cook__lead-images-container person-image-conatiner">
+                            <img src="https://www.allrecipes.com/thmb/uxJ-b7WYHmzoapL3ATWIa3LkHfY=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Liza-dbd720a4004a4eacaca9731d7d8a9a01.jpeg"
+                                alt="Photo" class="cook__lead-image person-image">
+                        </div>
+
+                        <div class="cook__lead-images-container person-image-conatiner">
+                            <img src="https://www.allrecipes.com/thmb/GVbylzl30yldX8AHSAFlhuQhxD8=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Ariel-bea8e0b59b684ae68cd9f04ab7a3c2d5.jpeg"
+                                alt="Photo" class="cook__lead-image person-image">
+                        </div>
+
+                        <div class="cook__lead-images-container person-image-conatiner">
+                            <img src="https://www.allrecipes.com/thmb/khqpeZiU508jyx1B54qgMpkCXho=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Molly-471690c7a1b1442e9b73b4caa79d93c4.jpeg"
+                                alt="Photo" class="cook__lead-image person-image">
+                        </div>
+
+                        <div class="cook__lead-images-container person-image-conatiner">
+                            <img src="https://www.allrecipes.com/thmb/11OG5dITnO6orcTf0DPkWl4f-pA=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Eric-af165ff079d24205b803a80ac4bff6ba.jpeg"
+                                alt="Photo" class="cook__lead-image person-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cook__contributors-testers">
+                    <div class="cook__contributors cook__team">
+                        <h3 class="cook__contributors-title cook__team-title">Contributors</h3>
+                        <div class="cook__contributors-images-container team-images-conatiner">
+                            <div class="cook__contributor-image-container person-image-conatiner">
+                                <img src="https://www.allrecipes.com/thmb/MAugZabTU98M6nCIoGfCGVLLlBA=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/PaulPJ-0b0a068096464f2d897eb44eefa960e2.jpeg"
+                                    alt="photo" class="cook__contributor-image person-image">
+                            </div>
+
+                            <div class="cook__contributor-image-container person-image-conatiner">
+                                <img src="https://www.allrecipes.com/thmb/jA-mEYWKF26bQQGAo4D2FdJ6zXA=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Breana-c3fdd314768c4d91a960197a3d88ae8b.jpeg"
+                                    alt="photo" class="cook__contributor-image person-image">
+                            </div>
+
+                            <div class="cook__contributor-image-container person-image-conatiner">
+                                <img src="https://www.allrecipes.com/thmb/TtHe3w72S9QKHsdxB_fKqSQeyuc=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Nicole-ca075b77f4cf4840b7c59a41f4ada286.jpeg"
+                                    alt="photo" class="cook__contributor-image person-image">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="cook__testers cook__team">
+                        <h3 class="cook__testers-title cook__team-title">Test Kitchen</h3>
+                        <div class="cook__testers-images-container team-images-conatiner">
+                            <div class="cook__tester-image-container person-image-conatiner">
+                                <img src="https://www.allrecipes.com/thmb/OiXewIiSWCutKCeG5ZKT3om6ytw=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Julia-d5ac3a4c440e4c8983830a2fc61980ad.jpeg"
+                                    alt="photo" class="cook__tester-image person-image">
+                            </div>
+
+                            <div class="cook__tester-image-container person-image-conatiner">
+                                <img src="https://www.allrecipes.com/thmb/pvax9b0oZ_NzP7M6RMPn4F_7vqg=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Juliana-82a92ba76f654d3e95a0e62707322e6e.jpeg"
+                                    alt="photo" class="cook__tester-image person-image">
+                            </div>
+
+                            <div class="cook__tester-image-container person-image-conatiner">
+                                <img src="https://www.allrecipes.com/thmb/of7wMmGshEnvqHtOhwMy3M4t2lI=/220x220/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Liz-91baaeaecda24183977803d6dc7d7836.jpeg"
+                                    alt="photo" class="cook__tester-image person-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="96.438" height="36.834"
+                    viewBox="-0.452 -0.416 96.438 36.834">
+                    <path fill="#F60"
+                        d="M49.676 26.983a1.3 1.3 0 0 0-.596.152c-1.513 1.007-2.686.832-3.447-.471-.522-.896-.782-2.658-.782-4.726s.26-3.871.782-4.766c.763-1.305 1.936-1.471 3.447-.471.139.1.4.2.6.153.689 0 1.252-.563 1.252-1.26 0-.556-.542-1.007-.866-1.192-.749-.418-2.107-.947-3.154-.842-1.233.119-2.068.536-3.017 1.65s-1.531 3.652-1.531 6.719v.014c0 3.1.6 5.6 1.5 6.682.947 1.1 1.8 1.5 3 1.656 1.047.1 2.405-.433 3.154-.85.324-.178.866-.629.866-1.191.044-.74-.484-1.24-1.184-1.257zM23.421 29.043V14.81c0-.696.562-1.26 1.259-1.26.695 0 1.3.6 1.3 1.26v.702c.854-1.166 2.547-2.021 4.281-1.962.676 0 1.2.6 1.2 1.293 0 .669-.522 1.22-1.191 1.259h-.087a1.3 1.3 0 0 1-.252-.026c-.205-.021-.364-.021-.509-.021-1.187 0-2.074.49-2.566 1.1-.574.702-.865 1.49-.865 2.35l-.009 9.537c0 .703-.568 1.272-1.258 1.272-.741-.014-1.324-.614-1.324-1.271zM54.018 10.919c-.77 0-1.406-.628-1.406-1.404 0-.782.638-1.412 1.406-1.412.773 0 1.4.6 1.4 1.412.003.785-.618 1.385-1.418 1.404z" />
+                    <path fill="#FEAA26"
+                        d="M91.903 0c-1.208 0-2.135.5-2.742 1.502-.716 1.147-1.072 2.4-1.072 3.8 0 1.8.4 3.3 1.3 4.501.373.5.9 1.1 1.2 1.593.226.3.4.8.4 1.3.023 1.827-1.169 15.275-1.181 15.31-.051.264-.012.7.1.928.24.8 1 1.5 1.9 1.463.909 0 1.697-.613 1.938-1.461.07-.24.109-.664.06-.928-.009-.037-1.202-13.485-1.179-15.312.021-.458.195-1.001.418-1.271.367-.444.871-1.059 1.246-1.594.894-1.236 1.336-2.734 1.336-4.501a6.96 6.96 0 0 0-1.072-3.757C94.041.5 93.1 0 91.9 0z" />
+                    <path fill="#F60"
+                        d="M5.076 15.823c-1.663 0-2.285 2.756-2.285 6.156s.5 6.2 2.3 6.2c1.829 0 2.278-2.754 2.278-6.154C7.355 18.6 7.1 15.8 5.1 15.823zm3.572 14.493c-.338 0-.663-.133-.899-.378-.246-.238-.349-.538-.349-.906l-.024-.432c-.782 1.179-1.896 1.717-3.308 1.725-1.054.006-2.191-.882-2.968-2.222C.372 26.8 0 24.8 0 21.887c0-2.838.377-4.924 1.121-6.196.78-1.338 1.749-2.02 2.358-2.113.266-.034.504-.054.735-.054 1.118 0 2.4.6 3.2 1.901v-.596c0-.702.575-1.28 1.277-1.28.71 0 1.3.6 1.3 1.28v14.194C9.922 29.7 9.4 30.3 8.6 30.316zM15.441 28.924c0 .77-.615 1.393-1.387 1.393a1.39 1.39 0 0 1-1.383-1.393V4.207a1.39 1.39 0 0 1 1.383-1.392c.771 0 1.4.6 1.4 1.392v24.717zM20.836 28.924a1.385 1.385 0 1 1-2.771 0V4.207c0-.769.615-1.392 1.385-1.392.763 0 1.4.6 1.4 1.392v24.717zM55.396 28.924c0 .77-.617 1.393-1.386 1.393a1.39 1.39 0 0 1-1.385-1.393V14.935c0-.768.623-1.385 1.385-1.385.769 0 1.4.6 1.4 1.385v13.989zM62.836 28.135c-1.828 0-2.285-2.756-2.285-6.155s.238-6.156 2.285-6.156c1.658 0 2.3 2.8 2.3 6.156-.013 3.42-.536 6.12-2.336 6.155zm3.957-12.445c-.782-1.338-1.749-2.02-2.359-2.113a6 6 0 0 0-.735-.054c-1.117 0-2.394.622-3.153 1.901v-.596c0-.702-.577-1.28-1.278-1.28-.709 0-1.272.578-1.272 1.28V35.14c0 .7.6 1.3 1.3 1.278.688 0 1.258-.556 1.271-1.246.007-.014 0-6.348 0-6.573.782 1.2 1.9 1.7 3.3 1.724 1.055 0 2.194-.881 2.963-2.221.735-1.271 1.105-3.293 1.105-6.217C67.912 19 67.5 17 66.8 15.69zM38.409 20.667c0-2.384-.688-4.77-2.365-4.77-1.676 0-2.12 2.385-2.12 4.777zm2.069 1.85h-6.562c-.054 1.2.2 2.9.5 3.856.191.6.7 1.7 1.9 1.717 1.16 0 1.835-.969 1.968-1.863.212-1.377 2.751-1.271 2.4.57-.423 2.188-1.928 3.525-4.36 3.525-1.51 0-2.716-.645-3.711-2.188-.979-1.529-1.219-4.359-1.219-6.301 0-2.183.397-4.01.854-5.349.425-1.233 1.366-2.937 4.075-2.937 4.009 0 4.7 4.5 4.7 8.45-.029.303-.223.503-.523.52zM76.449 20.667c0-2.384-.69-4.77-2.367-4.77-1.676 0-2.119 2.385-2.119 4.777zm2.067 1.85h-6.561c-.054 1.2.2 2.9.5 3.856.185.6.7 1.7 1.9 1.717s1.836-.969 1.969-1.863c.211-1.377 2.75-1.271 2.4.57-.426 2.188-1.931 3.525-4.361 3.525-1.504 0-2.717-.645-3.711-2.188-.979-1.529-1.219-4.359-1.219-6.301 0-2.183.401-4.01.86-5.349.419-1.233 1.364-2.937 4.068-2.937 4.008 0 4.7 4.5 4.7 8.45-.022.303-.261.503-.561.52zM85.818 21.292c-.985-.842-2.081-1.539-2.757-2.328-.921-1.064-.206-2.801.836-2.976.582-.091 1.3 0 1.9.325.185.1.4.2.6.18.688 0 1.239-.565 1.239-1.247 0-.523-.311-.96-.763-1.153l-.014-.006c-1.788-.709-3.922-.974-5.52.722-1.604 1.696-1.438 4.5.2 6.1.93.9 2.9 2.2 3.5 3.166 1.577 2.434-.537 4.686-2.977 3.388h-.007a1.2 1.2 0 0 0-.682-.206c-.684 0-1.238.559-1.238 1.248v.311c.055.3.2.5.4.7.008 0 .1.1.2.118 1.529 1 3.8 1.1 5.399-.151C88.656 27.4 88.5 23.6 85.8 21.292z" />
+                </svg>
+            </div>
+
+            <div class="footer-content">
+
+                <section class="footer-links">
+                    <div class="footer-links-sub-1">
+                        <a href="#" class="footer-newsletters-button">NEWSLETTERS</a>
+                    </div>
+
+                    <div class="footer-links-sub-2">
+                        <p class="footer-links-sub-2-title">Follow Us</p>
+                        <div class="footer-soicl-links-container">
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 509 507.14">
+                                    <path fill-rule="nonzero"
+                                        d="M509 254.5C509 113.94 395.06 0 254.5 0S0 113.94 0 254.5C0 373.86 82.17 474 193.02 501.51V332.27h-52.48V254.5h52.48v-33.51c0-86.63 39.2-126.78 124.24-126.78 16.13 0 43.95 3.17 55.33 6.33v70.5c-6.01-.63-16.44-.95-29.4-.95-41.73 0-57.86 15.81-57.86 56.91v27.5h83.13l-14.28 77.77h-68.85v174.87C411.35 491.92 509 384.62 509 254.5z" />
+                                </svg></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 512 512">
+                                    <path fill-rule="nonzero"
+                                        d="M170.663 256.157c-.083-47.121 38.055-85.4 85.167-85.482 47.121-.092 85.407 38.029 85.499 85.159.091 47.13-38.047 85.4-85.176 85.492-47.112.09-85.399-38.039-85.49-85.169zm-46.108.092c.141 72.602 59.106 131.327 131.69 131.185 72.592-.14 131.35-59.089 131.209-131.691-.141-72.577-59.114-131.336-131.715-131.194-72.585.141-131.325 59.114-131.184 131.7zm237.104-137.092c.033 16.954 13.817 30.682 30.772 30.649 16.961-.034 30.689-13.811 30.664-30.765-.033-16.954-13.818-30.69-30.78-30.656-16.962.033-30.689 13.818-30.656 30.772zm-208.696 345.4c-24.958-1.086-38.511-5.234-47.543-8.709-11.961-4.628-20.496-10.177-29.479-19.093-8.966-8.951-14.532-17.461-19.202-29.397-3.508-9.033-7.73-22.569-8.9-47.527-1.269-26.983-1.559-35.078-1.683-103.433-.133-68.338.116-76.434 1.294-103.441 1.069-24.941 5.242-38.512 8.709-47.536 4.628-11.977 10.161-20.496 19.094-29.478 8.949-8.983 17.459-14.532 29.403-19.202 9.025-3.526 22.561-7.715 47.511-8.9 26.998-1.278 35.085-1.551 103.423-1.684 68.353-.133 76.448.108 103.456 1.294 24.94 1.086 38.51 5.217 47.527 8.709 11.968 4.628 20.503 10.145 29.478 19.094 8.974 8.95 14.54 17.443 19.21 29.413 3.524 8.999 7.714 22.552 8.892 47.494 1.285 26.998 1.576 35.094 1.7 103.432.132 68.355-.117 76.451-1.302 103.442-1.087 24.957-5.226 38.52-8.709 47.56-4.629 11.953-10.161 20.488-19.103 29.471-8.941 8.949-17.451 14.531-29.403 19.201-9.009 3.517-22.561 7.714-47.494 8.9-26.998 1.269-35.086 1.56-103.448 1.684-68.338.133-76.424-.124-103.431-1.294zM149.977 1.773c-27.239 1.286-45.843 5.648-62.101 12.019-16.829 6.561-31.095 15.353-45.286 29.603C28.381 57.653 19.655 71.944 13.144 88.79c-6.303 16.299-10.575 34.912-11.778 62.168C.172 178.264-.102 186.973.031 256.489c.133 69.508.439 78.234 1.741 105.548 1.302 27.231 5.649 45.827 12.019 62.092 6.569 16.83 15.353 31.089 29.611 45.289 14.25 14.2 28.55 22.918 45.404 29.438 16.282 6.294 34.902 10.583 62.15 11.777 27.305 1.203 36.022 1.468 105.521 1.336 69.532-.133 78.25-.44 105.555-1.734 27.239-1.302 45.826-5.664 62.1-12.019 16.829-6.585 31.095-15.353 45.288-29.611 14.191-14.251 22.917-28.55 29.428-45.404 6.304-16.282 10.592-34.904 11.777-62.134 1.195-27.323 1.478-36.049 1.344-105.557-.133-69.516-.447-78.225-1.741-105.522-1.294-27.256-5.657-45.844-12.019-62.118-6.577-16.829-15.352-31.08-29.602-45.288-14.25-14.192-28.55-22.935-45.404-29.429-16.29-6.304-34.903-10.6-62.15-11.778C333.747.164 325.03-.101 255.506.031c-69.507.133-78.224.431-105.529 1.742z" />
+                                </svg></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 512 512">
+                                    <path fill-rule="nonzero"
+                                        d="M0 256c0 109.29 68.5 202.6 164.91 239.32-2.35-19.99-4.84-52.95.53-76.07 4.63-19.89 29.89-126.68 29.89-126.68s-7.62-15.25-7.62-37.85c0-35.41 20.53-61.87 46.11-61.87 21.76 0 32.25 16.33 32.25 35.89 0 21.87-13.93 54.55-21.12 84.87-5.99 25.36 12.74 46.05 37.74 46.05 45.29 0 80.13-47.77 80.13-116.71 0-61.04-43.86-103.68-106.48-103.68-72.48 0-115.04 54.38-115.04 110.59 0 21.91 8.42 45.38 18.96 58.16a7.568 7.568 0 012.07 5.21c0 .7-.1 1.41-.29 2.09-1.94 8.07-6.26 25.37-7.08 28.9-1.13 4.65-3.69 5.66-8.54 3.4-31.82-14.81-51.71-61.34-51.71-98.71 0-80.41 58.4-154.22 168.36-154.22 88.41 0 157.13 63 157.13 147.18 0 87.83-55.37 158.53-132.25 158.53-25.84 0-50.09-13.45-58.41-29.3 0 0-12.78 48.68-15.88 60.59-6.01 23.13-22.7 52.39-33.04 69.01 23.84 7.36 49.14 11.3 75.38 11.3 141.38 0 256-114.63 256-256S397.38 0 256 0 0 114.62 0 256z" />
+                                </svg></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 449.45 515.38">
+                                    <path fill-rule="nonzero"
+                                        d="M382.31 103.3c-27.76-18.1-47.79-47.07-54.04-80.82-1.35-7.29-2.1-14.8-2.1-22.48h-88.6l-.15 355.09c-1.48 39.77-34.21 71.68-74.33 71.68-12.47 0-24.21-3.11-34.55-8.56-23.71-12.47-39.94-37.32-39.94-65.91 0-41.07 33.42-74.49 74.48-74.49 7.67 0 15.02 1.27 21.97 3.44V190.8c-7.2-.99-14.51-1.59-21.97-1.59C73.16 189.21 0 262.36 0 352.3c0 55.17 27.56 104 69.63 133.52 26.48 18.61 58.71 29.56 93.46 29.56 89.93 0 163.08-73.16 163.08-163.08V172.23c34.75 24.94 77.33 39.64 123.28 39.64v-88.61c-24.75 0-47.8-7.35-67.14-19.96z" />
+                                </svg></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 640 640">
+                                    <path
+                                        d="M633.468 192.038s-6.248-44.115-25.477-63.485c-24.366-25.477-51.65-25.642-64.123-27.118-89.493-6.52-223.904-6.52-223.904-6.52h-.236s-134.352 0-223.893 6.52c-12.52 1.523-39.768 1.63-64.123 27.118-19.24 19.37-25.358 63.485-25.358 63.485S-.012 243.806-.012 295.681v48.509c0 51.768 6.366 103.643 6.366 103.643s6.248 44.114 25.358 63.52c24.355 25.477 56.363 24.65 70.655 27.367 51.237 4.89 217.644 6.366 217.644 6.366s134.529-.237 224.022-6.638c12.52-1.477 39.756-1.63 64.123-27.119 19.24-19.37 25.476-63.532 25.476-63.532S640 396.03 640 344.154v-48.508c-.13-51.769-6.497-103.643-6.497-103.643l-.035.035zm-379.8 211.007V223.173L426.56 313.41l-172.892 89.635z" />
+                                </svg></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 512 462.799">
+                                    <path fill-rule="nonzero"
+                                        d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" />
+                                </svg></a>
+                            <a href="#" class="footer-social-link">
+                                <?xml version="1.0" encoding="utf-8"?><svg width="20" height="20" version="1.1"
+                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88"
+                                    xml:space="preserve">
+                                    <style type="text/css">
+                                        <![CDATA[
+                                        .st0 {
+                                            fill: #000000;
+                                        }
+                                        ]]>
+                                    </style>
+                                    <g>
+                                        <path class="st0"
+                                            d="M0,0v122.88h122.88V0H0L0,0z M98.3,49.15H73.73v24.58H49.15V98.3H24.58V24.58H98.3V49.15L98.3,49.15z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="footer-navbar">
+                    <ul class="footer__navbar-list-container">
+                        <li class="footer__navbar-list"><a href="dinners">Dinners</a></li>
+                        <li class="footer__navbar-list"><a href="males">Males</a></li>
+                        <li class="footer__navbar-list"><a href="ingredients">Ingredients</a></li>
+                        <li class="footer__navbar-list"><a href="occasions">Occasions</a></li>
+                        <li class="footer__navbar-list"><a href="cuisines">Cuisines</a></li>
+                        <li class="footer__navbar-list"><a href="kitchen-tips">Kitchen Tips</a></li>
+                        <li class="footer__navbar-list"><a href="news">News</a></li>
+                        <li class="footer__navbar-list"><a href="Features">Features</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-second-links">
+                    <div class="footer-second-links-sub-1">
+                        <a href="#">About Us</a>
+                        <a href="#">Editorial Process</a>
+                        <a href="#">Anti-Racism Pledge</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Product Vetting</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Advertise</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
