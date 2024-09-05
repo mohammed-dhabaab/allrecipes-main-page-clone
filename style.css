@@ -55,6 +55,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.search__icon-button {
+    position: absolute;
+    right: 0; /* Adjust as needed */  
+    top: 50%;  
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    padding: 6px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
 }
 
 .header-sub-main__main {
@@ -67,12 +79,6 @@ body {
 .search {
     padding: 8px;
     border-radius: 5px;
-}
-
-.search__icon-button {
-    display: none;
-    background-color: var(--primary-color);
-    padding: 8px;
 }
 
 .log-in {
@@ -148,6 +154,10 @@ body {
     .header-sub-desktop__get-the-magazine {
         color: var(--primary-color);
         font-weight: 700;
+    }
+
+    .header-sub-desktop__get-the-magazine:hover {
+        border-bottom: 1px solid var(--primary-color);
     }
 }
 
@@ -391,6 +401,9 @@ body {
         margin: 0;
     }
 
+    .trending__title {
+        text-align: left;
+    }
 }
 
 
@@ -527,7 +540,7 @@ body {
     cursor: pointer;
 }
 
-@media (min-width:676px) {
+@media (min-width:767px) {
     .cook,
     .cook__customer {
         display: flex;
